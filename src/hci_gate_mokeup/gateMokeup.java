@@ -36,6 +36,11 @@ public class gateMokeup extends javax.swing.JFrame {
         setResizable(false);
 
         newDocumentBtn.setText("Add new document");
+        newDocumentBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                newDocumentBtnActionPerformed(evt);
+            }
+        });
 
         reorderTabsBtn.setText("Reorderble tabs");
 
@@ -45,24 +50,29 @@ public class gateMokeup extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(newDocumentBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(reorderTabsBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(reorderTabsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(newDocumentBtn))
                 .addContainerGap(540, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(68, 68, 68)
                 .addComponent(newDocumentBtn)
                 .addGap(18, 18, 18)
                 .addComponent(reorderTabsBtn)
-                .addContainerGap(348, Short.MAX_VALUE))
+                .addContainerGap(291, Short.MAX_VALUE))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void newDocumentBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newDocumentBtnActionPerformed
+        // TODO add your handling code here:
+        new newDocumentDialog(this, false).setVisible(true);
+    }//GEN-LAST:event_newDocumentBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -75,7 +85,7 @@ public class gateMokeup extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
