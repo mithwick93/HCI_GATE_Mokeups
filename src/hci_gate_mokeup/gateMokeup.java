@@ -43,6 +43,11 @@ public class gateMokeup extends javax.swing.JFrame {
         });
 
         reorderTabsBtn.setText("Reorderble tabs");
+        reorderTabsBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                reorderTabsBtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -51,18 +56,18 @@ public class gateMokeup extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(reorderTabsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(newDocumentBtn))
-                .addContainerGap(540, Short.MAX_VALUE))
+                    .addComponent(newDocumentBtn)
+                    .addComponent(reorderTabsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(227, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(68, 68, 68)
+                .addGap(38, 38, 38)
                 .addComponent(newDocumentBtn)
                 .addGap(18, 18, 18)
                 .addComponent(reorderTabsBtn)
-                .addContainerGap(291, Short.MAX_VALUE))
+                .addContainerGap(76, Short.MAX_VALUE))
         );
 
         pack();
@@ -71,8 +76,13 @@ public class gateMokeup extends javax.swing.JFrame {
 
     private void newDocumentBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newDocumentBtnActionPerformed
         // TODO add your handling code here:
-        new newDocumentDialog(this, false).setVisible(true);
+        new newDocumentDialog(this, true).setVisible(true);
     }//GEN-LAST:event_newDocumentBtnActionPerformed
+
+    private void reorderTabsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reorderTabsBtnActionPerformed
+        // TODO add your handling code here:
+        new reorderTabs(this, true).setVisible(true);
+    }//GEN-LAST:event_reorderTabsBtnActionPerformed
 
     /**
      * @param args the command line arguments
