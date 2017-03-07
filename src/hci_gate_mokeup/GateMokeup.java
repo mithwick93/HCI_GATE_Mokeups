@@ -6,7 +6,6 @@
 package hci_gate_mokeup;
 
 import javax.swing.JDialog;
-import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 /**
