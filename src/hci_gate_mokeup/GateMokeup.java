@@ -20,7 +20,6 @@ public class GateMokeup extends javax.swing.JFrame {
      */
     public GateMokeup() {
         initComponents();
-        this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
     }
 
     /**
@@ -36,8 +35,9 @@ public class GateMokeup extends javax.swing.JFrame {
         reorderTabsBtn = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         errorMessageBtn = new javax.swing.JButton();
+        mainInterfaceBtn = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("GATE mokeups");
         setLocationByPlatform(true);
         setResizable(false);
@@ -75,6 +75,13 @@ public class GateMokeup extends javax.swing.JFrame {
             }
         });
 
+        mainInterfaceBtn.setText("Main Interface");
+        mainInterfaceBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mainInterfaceBtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -88,7 +95,10 @@ public class GateMokeup extends javax.swing.JFrame {
                             .addComponent(newDocumentBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(reorderTabsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(errorMessageBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(errorMessageBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(mainInterfaceBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -99,7 +109,9 @@ public class GateMokeup extends javax.swing.JFrame {
                     .addComponent(newDocumentBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(reorderTabsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(errorMessageBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(errorMessageBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(mainInterfaceBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton3)
                 .addContainerGap(12, Short.MAX_VALUE))
@@ -138,6 +150,10 @@ public class GateMokeup extends javax.swing.JFrame {
         // TODO add your handling code here:
         exitApplication();
     }//GEN-LAST:event_formWindowClosing
+
+    private void mainInterfaceBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mainInterfaceBtnActionPerformed
+        new MainInterface().setVisible(true);
+    }//GEN-LAST:event_mainInterfaceBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -180,6 +196,7 @@ public class GateMokeup extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton errorMessageBtn;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton mainInterfaceBtn;
     private javax.swing.JButton newDocumentBtn;
     private javax.swing.JButton reorderTabsBtn;
     // End of variables declaration//GEN-END:variables

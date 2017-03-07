@@ -5,6 +5,10 @@
  */
 package hci_gate_mokeup;
 
+import javax.swing.Box;
+import javax.swing.JOptionPane;
+import javax.swing.tree.DefaultTreeCellRenderer;
+
 /**
  *
  * @author Yasas
@@ -16,6 +20,7 @@ public class MainInterface extends javax.swing.JFrame {
      */
     public MainInterface() {
         initComponents();
+
     }
 
     /**
@@ -27,37 +32,600 @@ public class MainInterface extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jMenuBar = new javax.swing.JMenuBar();
+        toolBar = new javax.swing.JToolBar();
+        jButton4 = new javax.swing.JButton();
+        jSeparator2 = new javax.swing.JToolBar.Separator();
+        jButton1 = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JToolBar.Separator();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jSeparator3 = new javax.swing.JToolBar.Separator();
+        jButton9 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
+        contentPane = new javax.swing.JSplitPane();
+        sidePane = new javax.swing.JPanel();
+        sideSplitPane = new javax.swing.JSplitPane();
+        gatePnl = new javax.swing.JPanel();
+        jToolBar2 = new javax.swing.JToolBar();
+        jLabel2 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTree1 = new javax.swing.JTree();
+        infoPnl = new javax.swing.JPanel();
+        jToolBar3 = new javax.swing.JToolBar();
+        jLabel1 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
+        tabbedPane = new DnDTabbedPane();
+        messagesPnl = new javax.swing.JPanel();
+        jSplitPane1 = new javax.swing.JSplitPane();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jPanel3 = new javax.swing.JPanel();
+        jToolBar4 = new javax.swing.JToolBar();
+        jLabel3 = new javax.swing.JLabel();
+        jButton11 = new javax.swing.JButton();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        corpusPnl = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        mnuBar = new javax.swing.JMenuBar();
+        fileMnu = new javax.swing.JMenu();
+        jMenu4 = new javax.swing.JMenu();
+        jMenuItem5 = new javax.swing.JMenuItem();
+        jMenu7 = new javax.swing.JMenu();
+        jMenu3 = new javax.swing.JMenu();
+        jSeparator5 = new javax.swing.JPopupMenu.Separator();
+        jMenu5 = new javax.swing.JMenu();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenu6 = new javax.swing.JMenu();
+        jMenu8 = new javax.swing.JMenu();
+        jSeparator4 = new javax.swing.JPopupMenu.Separator();
+        jMenuItem7 = new javax.swing.JMenuItem();
+        jSeparator6 = new javax.swing.JPopupMenu.Separator();
+        jMenuItem8 = new javax.swing.JMenuItem();
+        editMnu = new javax.swing.JMenu();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
 
-        jMenu1.setText("File");
-        jMenuBar.add(jMenu1);
+        toolBar.setFloatable(false);
+        toolBar.setRollover(true);
 
-        jMenu2.setText("Edit");
-        jMenuBar.add(jMenu2);
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/open.png"))); // NOI18N
+        jButton4.setFocusable(false);
+        jButton4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton4.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        toolBar.add(jButton4);
+        toolBar.add(jSeparator2);
 
-        setJMenuBar(jMenuBar);
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ANNIE.png"))); // NOI18N
+        jButton1.setFocusable(false);
+        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        toolBar.add(jButton1);
+        toolBar.add(jSeparator1);
+
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/APP.png"))); // NOI18N
+        jButton5.setFocusable(false);
+        jButton5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton5.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        toolBar.add(jButton5);
+
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/LANG_RISC.png"))); // NOI18N
+        jButton6.setFocusable(false);
+        jButton6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton6.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        toolBar.add(jButton6);
+
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/PROSC_RISC.png"))); // NOI18N
+        jButton7.setFocusable(false);
+        jButton7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton7.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        toolBar.add(jButton7);
+
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DATA_STORE.png"))); // NOI18N
+        jButton8.setFocusable(false);
+        jButton8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton8.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        toolBar.add(jButton8);
+        toolBar.add(jSeparator3);
+
+        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/PLUGIN.png"))); // NOI18N
+        jButton9.setFocusable(false);
+        jButton9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton9.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        toolBar.add(jButton9);
+
+        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ANN_DIFF.png"))); // NOI18N
+        jButton10.setFocusable(false);
+        jButton10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton10.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        toolBar.add(jButton10);
+
+        contentPane.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        contentPane.setDividerLocation(225);
+        contentPane.setDividerSize(2);
+
+        sideSplitPane.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        sideSplitPane.setDividerLocation(450);
+        sideSplitPane.setDividerSize(2);
+        sideSplitPane.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
+        sideSplitPane.setToolTipText("");
+
+        gatePnl.setBackground(new java.awt.Color(255, 255, 255));
+        gatePnl.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+
+        jToolBar2.setBackground(new java.awt.Color(204, 204, 204));
+        jToolBar2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jToolBar2.setFloatable(false);
+        jToolBar2.setRollover(true);
+
+        jLabel2.setText("GATE");
+        jToolBar2.add(jLabel2);
+
+        jButton2.setBackground(new java.awt.Color(204, 204, 204));
+        jButton2.setText("--");
+        jButton2.setFocusable(false);
+        jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jToolBar2.add(Box.createHorizontalGlue());
+        jToolBar2.add(jButton2);
+
+        jTree1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jTree1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("GATE");
+        javax.swing.tree.DefaultMutableTreeNode treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Applications");
+        treeNode1.add(treeNode2);
+        treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Language Resources");
+        treeNode1.add(treeNode2);
+        treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Processing Resources");
+        treeNode1.add(treeNode2);
+        treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Datastores");
+        treeNode1.add(treeNode2);
+        jTree1.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jTree1.setCellRenderer(new renderer.CustomIconRenderer());
+        jTree1.setRowHeight(30);
+        jScrollPane1.setViewportView(jTree1);
+
+        javax.swing.GroupLayout gatePnlLayout = new javax.swing.GroupLayout(gatePnl);
+        gatePnl.setLayout(gatePnlLayout);
+        gatePnlLayout.setHorizontalGroup(
+            gatePnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jToolBar2, javax.swing.GroupLayout.DEFAULT_SIZE, 219, Short.MAX_VALUE)
+            .addComponent(jScrollPane1)
+        );
+        gatePnlLayout.setVerticalGroup(
+            gatePnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(gatePnlLayout.createSequentialGroup()
+                .addComponent(jToolBar2, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 426, Short.MAX_VALUE)
+                .addGap(0, 0, 0))
+        );
+
+        sideSplitPane.setTopComponent(gatePnl);
+
+        infoPnl.setBackground(new java.awt.Color(255, 255, 255));
+        infoPnl.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+
+        jToolBar3.setBackground(new java.awt.Color(204, 204, 204));
+        jToolBar3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jToolBar3.setFloatable(false);
+        jToolBar3.setRollover(true);
+
+        jLabel1.setText("Information");
+        jToolBar3.add(jLabel1);
+
+        jButton3.setBackground(new java.awt.Color(204, 204, 204));
+        jButton3.setText("--");
+        jButton3.setFocusable(false);
+        jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton3.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jToolBar3.add(Box.createHorizontalGlue());
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jToolBar3.add(jButton3);
+
+        javax.swing.GroupLayout infoPnlLayout = new javax.swing.GroupLayout(infoPnl);
+        infoPnl.setLayout(infoPnlLayout);
+        infoPnlLayout.setHorizontalGroup(
+            infoPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jToolBar3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        infoPnlLayout.setVerticalGroup(
+            infoPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(infoPnlLayout.createSequentialGroup()
+                .addComponent(jToolBar3, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        sideSplitPane.setRightComponent(infoPnl);
+
+        javax.swing.GroupLayout sidePaneLayout = new javax.swing.GroupLayout(sidePane);
+        sidePane.setLayout(sidePaneLayout);
+        sidePaneLayout.setHorizontalGroup(
+            sidePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(sideSplitPane)
+        );
+        sidePaneLayout.setVerticalGroup(
+            sidePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(sideSplitPane)
+        );
+
+        contentPane.setLeftComponent(sidePane);
+
+        messagesPnl.setBackground(new java.awt.Color(255, 255, 255));
+
+        jSplitPane1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jSplitPane1.setDividerLocation(425);
+        jSplitPane1.setDividerSize(2);
+        jSplitPane1.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
+
+        jTable1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                { new Long(1), "GATE", "GATE 8.3 build 5704 started at Tue Mar 07 21:59:08 IST 2017."},
+                { new Long(2), "CREOLE plugin", "CREOLE plugin loaded: file:/D:/Programs/GATE/plugins/ANNIE/ "},
+                { new Long(3), "Corpus 1", "java.lang.NullPointerException"}
+            },
+            new String [] {
+                "#", "Resource", "Summary"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Long.class, java.lang.Object.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jTable1.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_LAST_COLUMN);
+        jTable1.setRowHeight(25);
+        jTable1.getTableHeader().setReorderingAllowed(false);
+        jTable1.setUpdateSelectionOnSort(false);
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
+            }
+        });
+        jScrollPane3.setViewportView(jTable1);
+
+        jSplitPane1.setTopComponent(jScrollPane3);
+
+        jToolBar4.setBackground(new java.awt.Color(204, 204, 204));
+        jToolBar4.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jToolBar4.setFloatable(false);
+        jToolBar4.setRollover(true);
+
+        jLabel3.setText("Stack Trace");
+        jToolBar4.add(jLabel3);
+
+        jButton11.setBackground(new java.awt.Color(204, 204, 204));
+        jButton11.setText("--");
+        jButton11.setFocusable(false);
+        jButton11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton11.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jToolBar3.add(Box.createHorizontalGlue());
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
+        jToolBar4.add(jButton11);
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane4.setViewportView(jTextArea1);
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jToolBar4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 465, Short.MAX_VALUE)
+            .addComponent(jScrollPane4)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addComponent(jToolBar4, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 53, Short.MAX_VALUE)
+                .addGap(0, 0, 0))
+        );
+
+        jSplitPane1.setRightComponent(jPanel3);
+
+        javax.swing.GroupLayout messagesPnlLayout = new javax.swing.GroupLayout(messagesPnl);
+        messagesPnl.setLayout(messagesPnlLayout);
+        messagesPnlLayout.setHorizontalGroup(
+            messagesPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jSplitPane1)
+        );
+        messagesPnlLayout.setVerticalGroup(
+            messagesPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 502, Short.MAX_VALUE)
+        );
+
+        tabbedPane.addTab("Messages", messagesPnl);
+
+        corpusPnl.setBackground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout corpusPnlLayout = new javax.swing.GroupLayout(corpusPnl);
+        corpusPnl.setLayout(corpusPnlLayout);
+        corpusPnlLayout.setHorizontalGroup(
+            corpusPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        corpusPnlLayout.setVerticalGroup(
+            corpusPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        tabbedPane.addTab("Corpus 1", corpusPnl);
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 467, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 502, Short.MAX_VALUE)
+        );
+
+        tabbedPane.addTab("Document 1", jPanel2);
+
+        contentPane.setRightComponent(tabbedPane);
+
+        jPanel1.setPreferredSize(new java.awt.Dimension(0, 20));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 21, Short.MAX_VALUE)
+        );
+
+        fileMnu.setText("File");
+
+        jMenu4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/APP.png"))); // NOI18N
+        jMenu4.setText("New Application");
+        fileMnu.add(jMenu4);
+
+        jMenuItem5.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/APP.png"))); // NOI18N
+        jMenuItem5.setText("Open Application");
+        fileMnu.add(jMenuItem5);
+
+        jMenu7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/APP.png"))); // NOI18N
+        jMenu7.setText("Recent Application");
+        fileMnu.add(jMenu7);
+
+        jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/APP.png"))); // NOI18N
+        jMenu3.setText("Ready Made Applications");
+        fileMnu.add(jMenu3);
+        fileMnu.add(jSeparator5);
+
+        jMenu5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/LANG_RISC.png"))); // NOI18N
+        jMenu5.setText("Language Resource");
+
+        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ANN_SCHEMA.png"))); // NOI18N
+        jMenuItem3.setText("Annotation Schema");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
+        jMenu5.add(jMenuItem3);
+
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/CORPUS.png"))); // NOI18N
+        jMenuItem1.setText("GATE Corpus");
+        jMenu5.add(jMenuItem1);
+
+        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DOC.png"))); // NOI18N
+        jMenuItem2.setText("GATE Document");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu5.add(jMenuItem2);
+
+        fileMnu.add(jMenu5);
+
+        jMenu6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/PROSC_RISC.png"))); // NOI18N
+        jMenu6.setText("Processing Resource");
+        fileMnu.add(jMenu6);
+
+        jMenu8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DATA_STORE.png"))); // NOI18N
+        jMenu8.setText("Datastores");
+        fileMnu.add(jMenu8);
+        fileMnu.add(jSeparator4);
+
+        jMenuItem7.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/PLUGIN.png"))); // NOI18N
+        jMenuItem7.setText("Manage CREOLE Plugin");
+        fileMnu.add(jMenuItem7);
+        fileMnu.add(jSeparator6);
+
+        jMenuItem8.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F4, java.awt.event.InputEvent.ALT_MASK));
+        jMenuItem8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/EXIT.png"))); // NOI18N
+        jMenuItem8.setText("Exit");
+        fileMnu.add(jMenuItem8);
+
+        mnuBar.add(fileMnu);
+
+        editMnu.setText("Options");
+        mnuBar.add(editMnu);
+
+        jMenu1.setText("Tools");
+        mnuBar.add(jMenu1);
+
+        jMenu2.setText("Help");
+        mnuBar.add(jMenu2);
+
+        setJMenuBar(mnuBar);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 701, Short.MAX_VALUE)
+            .addComponent(toolBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(contentPane)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 701, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 470, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(toolBar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(contentPane)
+                .addGap(0, 0, 0)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        new DocumentDialog(this, true).setVisible(true);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        exitApplication();
+    }//GEN-LAST:event_formWindowClosing
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        new NewAnnotationSchema().setVisible(true);
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+        int row = jTable1.rowAtPoint(evt.getPoint());
+        String str;
+        switch (row) {
+            case 2:
+                str = "java.lang.NullPointerException\n"
+                        + "	at gate.creole.ConditionalSerialAnalyserController.executeImpl(ConditionalSerialAnalyserController.java:205)\n"
+                        + "	at gate.creole.ConditionalSerialAnalyserController.execute(ConditionalSerialAnalyserController.java:132)\n"
+                        + "	at gate.util.Benchmark.executeWithBenchmarking(Benchmark.java:291)\n"
+                        + "	at gate.gui.SerialControllerEditor$RunAction$1.run(SerialControllerEditor.java:1759)\n"
+                        + "	at java.lang.Thread.run(Unknown Source)";
+                break;
+            case 0:
+                str = "GATE 8.3 build 5704 started at Tue Mar 07 21:59:08 IST 2017 and using Java 1.8.0_121 Oracle Corporation on Windows 10 amd64 10.0";
+                break;
+            case 1:
+                str = "CREOLE plugin loaded: file:/D:/Programs/GATE/plugins/ANNIE/";
+                break;
+            default:
+                str = "";
+        }
+        jTextArea1.setText(str);
+    }//GEN-LAST:event_jTable1MouseClicked
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton11ActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JSplitPane contentPane;
+    private javax.swing.JPanel corpusPnl;
+    private javax.swing.JMenu editMnu;
+    private javax.swing.JMenu fileMnu;
+    private javax.swing.JPanel gatePnl;
+    private javax.swing.JPanel infoPnl;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenuBar jMenuBar;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenu jMenu5;
+    private javax.swing.JMenu jMenu6;
+    private javax.swing.JMenu jMenu7;
+    private javax.swing.JMenu jMenu8;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem7;
+    private javax.swing.JMenuItem jMenuItem8;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JToolBar.Separator jSeparator1;
+    private javax.swing.JToolBar.Separator jSeparator2;
+    private javax.swing.JToolBar.Separator jSeparator3;
+    private javax.swing.JPopupMenu.Separator jSeparator4;
+    private javax.swing.JPopupMenu.Separator jSeparator5;
+    private javax.swing.JPopupMenu.Separator jSeparator6;
+    private javax.swing.JSplitPane jSplitPane1;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JToolBar jToolBar2;
+    private javax.swing.JToolBar jToolBar3;
+    private javax.swing.JToolBar jToolBar4;
+    private javax.swing.JTree jTree1;
+    private javax.swing.JPanel messagesPnl;
+    private javax.swing.JMenuBar mnuBar;
+    private javax.swing.JPanel sidePane;
+    private javax.swing.JSplitPane sideSplitPane;
+    private javax.swing.JTabbedPane tabbedPane;
+    private javax.swing.JToolBar toolBar;
     // End of variables declaration//GEN-END:variables
+
+    private void exitApplication() {
+        String ObjButtons[] = {"Yes", "No"};
+        int PromptResult = JOptionPane.showOptionDialog(null, "Are you sure you want to exit?", "GATE mockups", JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, null, ObjButtons, ObjButtons[1]);
+        if (PromptResult == JOptionPane.YES_OPTION) {
+            System.exit(0);
+        } else {
+
+        }
+    }
 }
