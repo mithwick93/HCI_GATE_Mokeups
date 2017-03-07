@@ -112,7 +112,7 @@ public class reorderTabs extends javax.swing.JDialog {
 
         dnDTabbedPane1.addTab("Example 3", jPanel3);
 
-        jButton3.setText("Ok");
+        jButton3.setText("OK");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
