@@ -6,6 +6,7 @@
 package hci_gate_mokeup;
 
 import javax.swing.JDialog;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 /**
@@ -19,6 +20,7 @@ public class gateMokeup extends javax.swing.JFrame {
      */
     public gateMokeup() {
         initComponents();
+        this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
     }
 
     /**
@@ -39,6 +41,11 @@ public class gateMokeup extends javax.swing.JFrame {
         setTitle("GATE mokeups");
         setLocationByPlatform(true);
         setResizable(false);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
 
         newDocumentBtn.setText("Add new document");
         newDocumentBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -74,32 +81,28 @@ public class gateMokeup extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(newDocumentBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(reorderTabsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(errorMessageBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 111, Short.MAX_VALUE)))
-                .addContainerGap())
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(newDocumentBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(reorderTabsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(errorMessageBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(32, 32, 32)
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(newDocumentBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(reorderTabsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(errorMessageBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton3)
-                .addContainerGap())
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         pack();
@@ -118,7 +121,7 @@ public class gateMokeup extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        this.dispose();
+        exitApplication();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void errorMessageBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_errorMessageBtnActionPerformed
@@ -130,6 +133,11 @@ public class gateMokeup extends javax.swing.JFrame {
         dialog.setAlwaysOnTop(true);
         dialog.setVisible(true);
     }//GEN-LAST:event_errorMessageBtnActionPerformed
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        // TODO add your handling code here:
+        exitApplication();
+    }//GEN-LAST:event_formWindowClosing
 
     /**
      * @param args the command line arguments
@@ -175,4 +183,14 @@ public class gateMokeup extends javax.swing.JFrame {
     private javax.swing.JButton newDocumentBtn;
     private javax.swing.JButton reorderTabsBtn;
     // End of variables declaration//GEN-END:variables
+
+    private void exitApplication() {
+    String ObjButtons[] = {"Yes", "No"};
+                int PromptResult = JOptionPane.showOptionDialog(null, "Are you sure you want to exit?", "GATE mockups", JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, null, ObjButtons, ObjButtons[1]);
+                if (PromptResult == JOptionPane.YES_OPTION) {
+                    System.exit(0);
+                } else {
+                    
+                }
+    }
 }
