@@ -126,7 +126,6 @@ public class gateMokeup extends javax.swing.JFrame {
         JOptionPane optionPane = new JOptionPane("Failed processing some documents.\n" +
                 "Please see Message Tab for more details.", 
                 JOptionPane.ERROR_MESSAGE,JOptionPane.DEFAULT_OPTION,null, options);
-        // if (optionPane.getSelectionValues().length > 0 && optionPane.getSelectionValues()[0].equals(options[0])) 
         JDialog dialog = optionPane.createDialog("Failure");
         dialog.setAlwaysOnTop(true);
         dialog.setVisible(true);
