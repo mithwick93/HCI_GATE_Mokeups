@@ -123,7 +123,7 @@ public class GateMokeup extends javax.swing.JFrame {
 
     private void newDocumentBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newDocumentBtnActionPerformed
         // TODO add your handling code here:
-        new DocumentDialog(this, true).setVisible(true);
+        new DocumentDialog(this, true).setVisible(false);
     }//GEN-LAST:event_newDocumentBtnActionPerformed
 
     private void reorderTabsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reorderTabsBtnActionPerformed
