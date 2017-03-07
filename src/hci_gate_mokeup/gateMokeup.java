@@ -5,6 +5,9 @@
  */
 package hci_gate_mokeup;
 
+import javax.swing.JDialog;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Shehan
@@ -30,6 +33,7 @@ public class gateMokeup extends javax.swing.JFrame {
         newDocumentBtn = new javax.swing.JButton();
         reorderTabsBtn = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        errorMessageBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("GATE mokeups");
@@ -57,6 +61,13 @@ public class gateMokeup extends javax.swing.JFrame {
             }
         });
 
+        errorMessageBtn.setText("Error Message");
+        errorMessageBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                errorMessageBtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -68,9 +79,12 @@ public class gateMokeup extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(newDocumentBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(reorderTabsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(newDocumentBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(reorderTabsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(errorMessageBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 111, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -81,7 +95,9 @@ public class gateMokeup extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(newDocumentBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(reorderTabsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 104, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(errorMessageBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
                 .addComponent(jButton3)
                 .addContainerGap())
         );
@@ -104,6 +120,17 @@ public class gateMokeup extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void errorMessageBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_errorMessageBtnActionPerformed
+        Object[] options = { "View Messages", "Cancel" };
+        JOptionPane optionPane = new JOptionPane("Failed processing some documents.\n" +
+                "Please see Message Tab for more details.", 
+                JOptionPane.ERROR_MESSAGE,JOptionPane.DEFAULT_OPTION,null, options);
+        // if (optionPane.getSelectionValues().length > 0 && optionPane.getSelectionValues()[0].equals(options[0])) 
+        JDialog dialog = optionPane.createDialog("Failure");
+        dialog.setAlwaysOnTop(true);
+        dialog.setVisible(true);
+    }//GEN-LAST:event_errorMessageBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -144,6 +171,7 @@ public class gateMokeup extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton errorMessageBtn;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton newDocumentBtn;
     private javax.swing.JButton reorderTabsBtn;
