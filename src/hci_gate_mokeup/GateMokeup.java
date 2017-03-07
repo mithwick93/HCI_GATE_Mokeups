@@ -13,12 +13,12 @@ import javax.swing.JOptionPane;
  *
  * @author Shehan
  */
-public class gateMokeup extends javax.swing.JFrame {
+public class GateMokeup extends javax.swing.JFrame {
 
     /**
      * Creates new form NewJFrame
      */
-    public gateMokeup() {
+    public GateMokeup() {
         initComponents();
         this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
     }
@@ -111,7 +111,7 @@ public class gateMokeup extends javax.swing.JFrame {
 
     private void newDocumentBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newDocumentBtnActionPerformed
         // TODO add your handling code here:
-        new newDocumentDialog(this, true).setVisible(true);
+        new DocumentDialog(this, true).setVisible(true);
     }//GEN-LAST:event_newDocumentBtnActionPerformed
 
     private void reorderTabsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reorderTabsBtnActionPerformed
@@ -156,13 +156,13 @@ public class gateMokeup extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(gateMokeup.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GateMokeup.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(gateMokeup.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GateMokeup.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(gateMokeup.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GateMokeup.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(gateMokeup.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GateMokeup.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -172,7 +172,7 @@ public class gateMokeup extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new gateMokeup().setVisible(true);
+                new GateMokeup().setVisible(true);
             }
         });
     }
