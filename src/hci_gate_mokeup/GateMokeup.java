@@ -5,6 +5,7 @@
  */
 package hci_gate_mokeup;
 
+import java.awt.Toolkit;
 import javax.swing.JDialog;
 import javax.swing.JOptionPane;
 
@@ -136,10 +137,11 @@ public class GateMokeup extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void errorMessageBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_errorMessageBtnActionPerformed
-        Object[] options = { "View Messages", "Cancel" };
-        JOptionPane optionPane = new JOptionPane("Failed processing some documents.\n" +
-                "Please see Message Tab for more details.", 
-                JOptionPane.ERROR_MESSAGE,JOptionPane.DEFAULT_OPTION,null, options);
+        Object[] options = {"View Messages", "Cancel"};
+        Toolkit.getDefaultToolkit().beep();
+        JOptionPane optionPane = new JOptionPane("Failed processing some documents.\n"
+                + "Please see Message Tab for more details.",
+                JOptionPane.ERROR_MESSAGE, JOptionPane.DEFAULT_OPTION, null, options);
         JDialog dialog = optionPane.createDialog("Failure");
         dialog.setAlwaysOnTop(true);
         dialog.setVisible(true);
@@ -201,12 +203,13 @@ public class GateMokeup extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private void exitApplication() {
-    String ObjButtons[] = {"Yes", "No"};
-                int PromptResult = JOptionPane.showOptionDialog(null, "Are you sure you want to exit?", "GATE mockups", JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, null, ObjButtons, ObjButtons[1]);
-                if (PromptResult == JOptionPane.YES_OPTION) {
-                    System.exit(0);
-                } else {
-                    
-                }
+        Toolkit.getDefaultToolkit().beep();
+        String ObjButtons[] = {"Yes", "No"};
+        int PromptResult = JOptionPane.showOptionDialog(null, "Are you sure you want to exit?", "GATE mockups", JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, null, ObjButtons, ObjButtons[1]);
+        if (PromptResult == JOptionPane.YES_OPTION) {
+            System.exit(0);
+        } else {
+
+        }
     }
 }

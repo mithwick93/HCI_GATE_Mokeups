@@ -5,6 +5,7 @@
  */
 package hci_gate_mokeup;
 
+import java.awt.Color;
 import javax.swing.Box;
 import javax.swing.JOptionPane;
 import javax.swing.tree.DefaultTreeCellRenderer;
@@ -531,9 +532,11 @@ public class MainInterface extends javax.swing.JFrame {
 
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
         int row = jTable1.rowAtPoint(evt.getPoint());
+        jTextArea1.setForeground(Color.black);
         String str;
         switch (row) {
             case 2:
+                jTextArea1.setForeground(Color.red);
                 str = "java.lang.NullPointerException\n"
                         + "	at gate.creole.ConditionalSerialAnalyserController.executeImpl(ConditionalSerialAnalyserController.java:205)\n"
                         + "	at gate.creole.ConditionalSerialAnalyserController.execute(ConditionalSerialAnalyserController.java:132)\n"
